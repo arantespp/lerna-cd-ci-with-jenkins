@@ -9,13 +9,164 @@
 8 silly initialize attempt
 9 silly isDetachedHead
 10 silly getCurrentBranch
-11 error initialize caught error
-12 error Error: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
-12 error Use '--' to separate paths from revisions, like this:
-12 error 'git <command> [<revision>...] -- [<file>...]'
-12 error
-12 error     at Function.module.exports.sync (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:303:26)
-12 error     at Function.execSync (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
-12 error     at Function.getCurrentBranch (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/GitUtilities.js:202:59)
-12 error     at Function.isDetachedHead (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/GitUtilities.js:45:37)
-12 error     at PublishCommand.initialize (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:260:36)
+11 verbose getCurrentBranch master
+12 verbose isDetachedHead false
+13 silly getCurrentBranch
+14 verbose getCurrentBranch master
+15 silly getUpdates
+16 info Checking for updated packages...
+17 silly hasTags
+18 verbose hasTags false
+19 info Comparing with initial commit.
+20 verbose updated apple
+21 verbose updated banana
+22 verbose updated grocery
+23 info Checking for prereleased packages...
+24 silly collectDependents
+25 silly isPackageDependentOf apple apple
+26 silly isPackageDependentOf apple banana
+27 silly isPackageDependentOf apple grocery
+28 silly isPackageDependentOf banana apple
+29 silly isPackageDependentOf banana banana
+30 silly isPackageDependentOf banana grocery
+31 silly isPackageDependentOf grocery apple
+32 verbose dependent grocery depends on apple
+33 silly isPackageDependentOf grocery banana
+34 verbose dependent grocery depends on banana
+35 silly isPackageDependentOf grocery grocery
+36 silly isPackageDependentOf apple grocery
+37 silly isPackageDependentOf banana grocery
+38 silly collectUpdates
+39 verbose has filtered update apple
+40 verbose has filtered update banana
+41 verbose has filtered update grocery
+42 silly initialize success
+43 silly execute attempt
+44 silly runScriptSync preversion lerna
+45 silly runScriptSync preversion apple
+46 silly runScriptSync version apple
+47 silly runScriptSync preversion banana
+48 silly runScriptSync version banana
+49 silly runScriptSync preversion grocery
+50 silly runScriptSync version grocery
+51 silly runScriptSync version lerna
+52 silly addFile /home/arantespp/Sandbox/lerna/packages/apple/package.json
+53 silly addFile /home/arantespp/Sandbox/lerna/packages/banana/package.json
+54 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/package.json
+55 silly commit Publish
+55 silly commit
+55 silly commit  - apple@1.0.1
+55 silly commit  - banana@1.0.1
+55 silly commit  - grocery@1.0.1
+56 verbose commit [ 'commit',
+56 verbose commit   '--no-verify',
+56 verbose commit   '-F',
+56 verbose commit   '/tmp/09020cc8-45a4-4e8a-85ce-20f71c503ce3/lerna-commit.txt' ]
+57 silly addTag apple@1.0.1
+58 silly addTag banana@1.0.1
+59 silly addTag grocery@1.0.1
+60 silly runScriptSync postversion apple
+61 silly runScriptSync postversion banana
+62 silly runScriptSync postversion grocery
+63 silly runScriptSync postversion lerna
+64 info publish Publishing packages to npm...
+65 silly existsSync /home/arantespp/Sandbox/lerna/packages/apple/scripts/prepublish.js
+66 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/apple/scripts/prepublish.js
+67 silly existsSync /home/arantespp/Sandbox/lerna/packages/banana/scripts/prepublish.js
+68 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/banana/scripts/prepublish.js
+69 silly existsSync /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
+70 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
+71 verbose publishing apple
+72 silly publishTaggedInDir latest apple
+73 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+74 verbose publishing banana
+75 silly publishTaggedInDir latest banana
+76 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+77 error publish Retrying failed publish: banana
+78 verbose publish error undefined
+79 verbose publishing banana
+80 silly publishTaggedInDir latest banana
+81 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+82 error publish Retrying failed publish: apple
+83 verbose publish error undefined
+84 verbose publishing apple
+85 silly publishTaggedInDir latest apple
+86 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+87 error publish Retrying failed publish: banana
+88 verbose publish error undefined
+89 verbose publishing banana
+90 silly publishTaggedInDir latest banana
+91 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+92 error publish Retrying failed publish: apple
+93 verbose publish error undefined
+94 verbose publishing apple
+95 silly publishTaggedInDir latest apple
+96 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+97 error publish Retrying failed publish: banana
+98 verbose publish error undefined
+99 verbose publishing banana
+100 silly publishTaggedInDir latest banana
+101 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+102 error publish Retrying failed publish: apple
+103 verbose publish error undefined
+104 verbose publishing apple
+105 silly publishTaggedInDir latest apple
+106 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+107 error publish Retrying failed publish: apple
+108 verbose publish error undefined
+109 verbose publishing apple
+110 silly publishTaggedInDir latest apple
+111 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+112 error publish Retrying failed publish: banana
+113 verbose publish error undefined
+114 verbose publishing banana
+115 silly publishTaggedInDir latest banana
+116 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+117 error publish Ran out of retries while publishing apple Error: Command failed: npm publish --tag latest
+117 error publish npm notice
+117 error publish npm notice 📦  apple@1.0.1
+117 error publish npm notice === Tarball Contents ===
+117 error publish npm notice 335B package.json
+117 error publish npm notice 85B  index.js
+117 error publish npm notice === Tarball Details ===
+117 error publish npm notice name:          apple
+117 error publish npm notice version:       1.0.1
+117 error publish npm notice package size:  389 B
+117 error publish npm notice unpacked size: 420 B
+117 error publish npm notice shasum:        bae1ee8630bf61e180e021bcb5610dce74214b5c
+117 error publish npm notice integrity:     sha512-m2oxd6FJ33RLh[...]rZwYOGp5fiNLQ==
+117 error publish npm notice total files:   2
+117 error publish npm notice
+117 error publish npm ERR! code ENEEDAUTH
+117 error publish npm ERR! need auth auth required for publishing
+117 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
+117 error publish
+117 error publish npm ERR! A complete log of this run can be found in:
+117 error publish npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_30_40_203Z-debug.log
+117 error publish
+117 error publish     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+117 error publish     at process._tickCallback (internal/process/next_tick.js:178:7)
+118 error execute callback with error
+119 error Error: Command failed: npm publish --tag latest
+119 error npm notice
+119 error npm notice 📦  apple@1.0.1
+119 error npm notice === Tarball Contents ===
+119 error npm notice 335B package.json
+119 error npm notice 85B  index.js
+119 error npm notice === Tarball Details ===
+119 error npm notice name:          apple
+119 error npm notice version:       1.0.1
+119 error npm notice package size:  389 B
+119 error npm notice unpacked size: 420 B
+119 error npm notice shasum:        bae1ee8630bf61e180e021bcb5610dce74214b5c
+119 error npm notice integrity:     sha512-m2oxd6FJ33RLh[...]rZwYOGp5fiNLQ==
+119 error npm notice total files:   2
+119 error npm notice
+119 error npm ERR! code ENEEDAUTH
+119 error npm ERR! need auth auth required for publishing
+119 error npm ERR! need auth You need to authorize this machine using `npm adduser`
+119 error
+119 error npm ERR! A complete log of this run can be found in:
+119 error npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_30_40_203Z-debug.log
+119 error
+119 error     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)

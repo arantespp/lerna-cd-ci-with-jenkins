@@ -1,2 +1,2 @@
 const sillyname = require('sillyname');
-module.exports = `banana and ${sillyname()}`;
+module.exports = `bananas and ${sillyname()}`;

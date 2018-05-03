@@ -2,7 +2,7 @@
   "lerna": "2.11.0",
   "command": {
     "publish": {
-      "skip-npm": true
+      "skip-npm": [true]
     }
   },
   "packages": [

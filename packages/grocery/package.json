@@ -1,6 +1,6 @@
 {
   "name": "grocery",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "apple": "^1.0.1",
-    "banana": "^0.0.1",
+    "banana": "^0.0.2-0",
     "mongoose": "^5.0.17",
     "ng-google-maps-loader": "^0.0.2",
     "sillyname": "0.1.0"

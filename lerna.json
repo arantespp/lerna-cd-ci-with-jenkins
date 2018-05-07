@@ -6,7 +6,8 @@
     }
   },
   "packages": [
-    "packages/*"
+    "packages/*",
+    "projects/*"
   ],
-  "version": "independent"
+  "version": "0.0.1"
 }

@@ -18,120 +18,112 @@
 17 silly hasTags
 18 verbose hasTags true
 19 silly getLastTag
-20 verbose getLastTag banana@0.0.2-0
-21 info Comparing with banana@0.0.2-0.
-22 silly diffSinceIn banana@0.0.2-0 packages/apple
+20 verbose getLastTag banana@0.0.2
+21 info Comparing with banana@0.0.2.
+22 silly diffSinceIn banana@0.0.2 packages/apple
 23 silly diff
-24 silly diffSinceIn banana@0.0.2-0 packages/banana
+24 silly diffSinceIn banana@0.0.2 packages/banana
 25 silly diff
-26 silly diffSinceIn banana@0.0.2-0 packages/grocery
-27 silly diff
-28 info Checking for prereleased packages...
-29 verbose prereleased banana
+26 silly diffSinceIn banana@0.0.2 packages/grocery
+27 silly diff packages/grocery/index.js
+28 verbose updated grocery
+29 info Checking for prereleased packages...
 30 silly collectDependents
-31 silly isPackageDependentOf apple banana
-32 silly isPackageDependentOf banana banana
-33 silly isPackageDependentOf grocery banana
-34 verbose dependent grocery depends on banana
-35 silly collectUpdates
-36 verbose has filtered update banana
+31 silly isPackageDependentOf apple grocery
+32 silly isPackageDependentOf banana grocery
+33 silly isPackageDependentOf grocery grocery
+34 silly isPackageDependentOf apple grocery
+35 silly isPackageDependentOf banana grocery
+36 silly collectUpdates
 37 verbose has filtered update grocery
 38 silly initialize success
 39 silly execute attempt
 40 silly runScriptSync preversion lerna
-41 silly runScriptSync preversion banana
-42 silly runScriptSync version banana
-43 silly runScriptSync preversion grocery
-44 silly runScriptSync version grocery
-45 silly runScriptSync version lerna
-46 silly addFile /home/arantespp/Sandbox/lerna/packages/banana/package.json
-47 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/package.json
-48 silly commit Publish
-48 silly commit
-48 silly commit  - banana@0.0.2
-48 silly commit  - grocery@0.0.3
-49 verbose commit [ 'commit',
-49 verbose commit   '--no-verify',
-49 verbose commit   '-F',
-49 verbose commit   '/tmp/4894e936-6d83-4563-986b-653e358ea495/lerna-commit.txt' ]
-50 silly addTag banana@0.0.2
-51 silly addTag grocery@0.0.3
-52 silly runScriptSync postversion banana
-53 silly runScriptSync postversion grocery
-54 silly runScriptSync postversion lerna
-55 info publish Publishing packages to npm...
-56 silly existsSync /home/arantespp/Sandbox/lerna/packages/banana/scripts/prepublish.js
-57 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/banana/scripts/prepublish.js
-58 silly existsSync /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
-59 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
-60 verbose publishing banana
-61 silly publishTaggedInDir latest banana
-62 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
-63 error publish Retrying failed publish: banana
-64 verbose publish error undefined
-65 verbose publishing banana
-66 silly publishTaggedInDir latest banana
-67 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
-68 error publish Retrying failed publish: banana
-69 verbose publish error undefined
-70 verbose publishing banana
-71 silly publishTaggedInDir latest banana
-72 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
-73 error publish Retrying failed publish: banana
-74 verbose publish error undefined
-75 verbose publishing banana
-76 silly publishTaggedInDir latest banana
-77 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
-78 error publish Retrying failed publish: banana
-79 verbose publish error undefined
-80 verbose publishing banana
-81 silly publishTaggedInDir latest banana
-82 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
-83 error publish Ran out of retries while publishing banana Error: Command failed: npm publish --tag latest
-83 error publish npm notice
-83 error publish npm notice 📦  banana@0.0.2
-83 error publish npm notice === Tarball Contents ===
-83 error publish npm notice 336B package.json
-83 error publish npm notice 85B  index.js
-83 error publish npm notice === Tarball Details ===
-83 error publish npm notice name:          banana
-83 error publish npm notice version:       0.0.2
-83 error publish npm notice package size:  389 B
-83 error publish npm notice unpacked size: 421 B
-83 error publish npm notice shasum:        e20ef1a55b87a9f92bfc2a78dd48aed2de659adf
-83 error publish npm notice integrity:     sha512-7TaqwBxcQKYXX[...]5rEw42HWJBTnw==
-83 error publish npm notice total files:   2
-83 error publish npm notice
-83 error publish npm ERR! code ENEEDAUTH
-83 error publish npm ERR! need auth auth required for publishing
-83 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
-83 error publish
-83 error publish npm ERR! A complete log of this run can be found in:
-83 error publish npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_49_03_230Z-debug.log
-83 error publish
-83 error publish     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
-83 error publish     at process._tickCallback (internal/process/next_tick.js:178:7)
-84 error execute callback with error
-85 error Error: Command failed: npm publish --tag latest
-85 error npm notice
-85 error npm notice 📦  banana@0.0.2
-85 error npm notice === Tarball Contents ===
-85 error npm notice 336B package.json
-85 error npm notice 85B  index.js
-85 error npm notice === Tarball Details ===
-85 error npm notice name:          banana
-85 error npm notice version:       0.0.2
-85 error npm notice package size:  389 B
-85 error npm notice unpacked size: 421 B
-85 error npm notice shasum:        e20ef1a55b87a9f92bfc2a78dd48aed2de659adf
-85 error npm notice integrity:     sha512-7TaqwBxcQKYXX[...]5rEw42HWJBTnw==
-85 error npm notice total files:   2
-85 error npm notice
-85 error npm ERR! code ENEEDAUTH
-85 error npm ERR! need auth auth required for publishing
-85 error npm ERR! need auth You need to authorize this machine using `npm adduser`
-85 error
-85 error npm ERR! A complete log of this run can be found in:
-85 error npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_49_03_230Z-debug.log
-85 error
-85 error     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+41 silly runScriptSync preversion grocery
+42 silly runScriptSync version grocery
+43 silly runScriptSync version lerna
+44 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/package.json
+45 silly commit Publish
+45 silly commit
+45 silly commit  - grocery@0.0.4
+46 verbose commit [ 'commit',
+46 verbose commit   '--no-verify',
+46 verbose commit   '-F',
+46 verbose commit   '/tmp/c645b0cd-6e21-4d7f-9b08-a87bfbaab2b6/lerna-commit.txt' ]
+47 silly addTag grocery@0.0.4
+48 silly runScriptSync postversion grocery
+49 silly runScriptSync postversion lerna
+50 info publish Publishing packages to npm...
+51 silly existsSync /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
+52 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
+53 verbose publishing grocery
+54 silly publishTaggedInDir latest grocery
+55 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
+56 error publish Retrying failed publish: grocery
+57 verbose publish error undefined
+58 verbose publishing grocery
+59 silly publishTaggedInDir latest grocery
+60 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
+61 error publish Retrying failed publish: grocery
+62 verbose publish error undefined
+63 verbose publishing grocery
+64 silly publishTaggedInDir latest grocery
+65 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
+66 error publish Retrying failed publish: grocery
+67 verbose publish error undefined
+68 verbose publishing grocery
+69 silly publishTaggedInDir latest grocery
+70 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
+71 error publish Retrying failed publish: grocery
+72 verbose publish error undefined
+73 verbose publishing grocery
+74 silly publishTaggedInDir latest grocery
+75 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
+76 error publish Ran out of retries while publishing grocery Error: Command failed: npm publish --tag latest
+76 error publish npm notice
+76 error publish npm notice 📦  grocery@0.0.4
+76 error publish npm notice === Tarball Contents ===
+76 error publish npm notice 384B package.json
+76 error publish npm notice 190B index.js
+76 error publish npm notice === Tarball Details ===
+76 error publish npm notice name:          grocery
+76 error publish npm notice version:       0.0.4
+76 error publish npm notice package size:  420 B
+76 error publish npm notice unpacked size: 574 B
+76 error publish npm notice shasum:        127d339f3dce5bacc9a0dc603980571279cc62d8
+76 error publish npm notice integrity:     sha512-OWqWhrM3YnV4V[...]CPiAMSw9DzETA==
+76 error publish npm notice total files:   2
+76 error publish npm notice
+76 error publish npm ERR! code ENEEDAUTH
+76 error publish npm ERR! need auth auth required for publishing
+76 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
+76 error publish
+76 error publish npm ERR! A complete log of this run can be found in:
+76 error publish npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_53_07_170Z-debug.log
+76 error publish
+76 error publish     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+76 error publish     at process._tickCallback (internal/process/next_tick.js:178:7)
+77 error execute callback with error
+78 error Error: Command failed: npm publish --tag latest
+78 error npm notice
+78 error npm notice 📦  grocery@0.0.4
+78 error npm notice === Tarball Contents ===
+78 error npm notice 384B package.json
+78 error npm notice 190B index.js
+78 error npm notice === Tarball Details ===
+78 error npm notice name:          grocery
+78 error npm notice version:       0.0.4
+78 error npm notice package size:  420 B
+78 error npm notice unpacked size: 574 B
+78 error npm notice shasum:        127d339f3dce5bacc9a0dc603980571279cc62d8
+78 error npm notice integrity:     sha512-OWqWhrM3YnV4V[...]CPiAMSw9DzETA==
+78 error npm notice total files:   2
+78 error npm notice
+78 error npm ERR! code ENEEDAUTH
+78 error npm ERR! need auth auth required for publishing
+78 error npm ERR! need auth You need to authorize this machine using `npm adduser`
+78 error
+78 error npm ERR! A complete log of this run can be found in:
+78 error npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_53_07_170Z-debug.log
+78 error
+78 error     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)

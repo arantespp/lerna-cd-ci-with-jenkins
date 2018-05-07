@@ -1,13 +1,9 @@
 {
   "lerna": "2.11.0",
-  "command": {
-    "publish": {
-      "skip-npm": [true]
-    }
-  },
+  "command": {},
   "packages": [
     "packages/*",
     "projects/*"
   ],
-  "version": "0.0.1"
+  "version": "0.0.2"
 }

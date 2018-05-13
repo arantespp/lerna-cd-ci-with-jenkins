@@ -1,5 +1,9 @@
 0 silly input [ 'publish' ]
-1 silly flags { _: [ 'publish' ], 'reject-cycles': false, rejectCycles: false }
+1 silly flags { _: [ 'publish' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   'skip-npm': true,
+1 silly flags   skipNpm: true }
 2 verbose rootPath /home/arantespp/Sandbox/lerna
 3 info version 2.11.0
 4 silly isInitialized
@@ -18,112 +22,108 @@
 17 silly hasTags
 18 verbose hasTags true
 19 silly getLastTag
-20 verbose getLastTag banana@0.0.2
-21 info Comparing with banana@0.0.2.
-22 silly diffSinceIn banana@0.0.2 packages/apple
-23 silly diff
-24 silly diffSinceIn banana@0.0.2 packages/banana
-25 silly diff
-26 silly diffSinceIn banana@0.0.2 packages/grocery
-27 silly diff packages/grocery/index.js
-28 verbose updated grocery
-29 info Checking for prereleased packages...
-30 silly collectDependents
-31 silly isPackageDependentOf apple grocery
-32 silly isPackageDependentOf banana grocery
-33 silly isPackageDependentOf grocery grocery
-34 silly isPackageDependentOf apple grocery
-35 silly isPackageDependentOf banana grocery
-36 silly collectUpdates
-37 verbose has filtered update grocery
-38 silly initialize success
-39 silly execute attempt
-40 silly runScriptSync preversion lerna
-41 silly runScriptSync preversion grocery
-42 silly runScriptSync version grocery
-43 silly runScriptSync version lerna
-44 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/package.json
-45 silly commit Publish
-45 silly commit
-45 silly commit  - grocery@0.0.4
-46 verbose commit [ 'commit',
-46 verbose commit   '--no-verify',
-46 verbose commit   '-F',
-46 verbose commit   '/tmp/c645b0cd-6e21-4d7f-9b08-a87bfbaab2b6/lerna-commit.txt' ]
-47 silly addTag grocery@0.0.4
-48 silly runScriptSync postversion grocery
-49 silly runScriptSync postversion lerna
-50 info publish Publishing packages to npm...
-51 silly existsSync /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
-52 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
-53 verbose publishing grocery
-54 silly publishTaggedInDir latest grocery
-55 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
-56 error publish Retrying failed publish: grocery
-57 verbose publish error undefined
-58 verbose publishing grocery
-59 silly publishTaggedInDir latest grocery
-60 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
-61 error publish Retrying failed publish: grocery
-62 verbose publish error undefined
-63 verbose publishing grocery
-64 silly publishTaggedInDir latest grocery
-65 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
-66 error publish Retrying failed publish: grocery
-67 verbose publish error undefined
-68 verbose publishing grocery
-69 silly publishTaggedInDir latest grocery
-70 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
-71 error publish Retrying failed publish: grocery
-72 verbose publish error undefined
-73 verbose publishing grocery
-74 silly publishTaggedInDir latest grocery
-75 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/grocery' }
-76 error publish Ran out of retries while publishing grocery Error: Command failed: npm publish --tag latest
-76 error publish npm notice
-76 error publish npm notice 📦  grocery@0.0.4
-76 error publish npm notice === Tarball Contents ===
-76 error publish npm notice 384B package.json
-76 error publish npm notice 190B index.js
-76 error publish npm notice === Tarball Details ===
-76 error publish npm notice name:          grocery
-76 error publish npm notice version:       0.0.4
-76 error publish npm notice package size:  420 B
-76 error publish npm notice unpacked size: 574 B
-76 error publish npm notice shasum:        127d339f3dce5bacc9a0dc603980571279cc62d8
-76 error publish npm notice integrity:     sha512-OWqWhrM3YnV4V[...]CPiAMSw9DzETA==
-76 error publish npm notice total files:   2
-76 error publish npm notice
-76 error publish npm ERR! code ENEEDAUTH
-76 error publish npm ERR! need auth auth required for publishing
-76 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
-76 error publish
-76 error publish npm ERR! A complete log of this run can be found in:
-76 error publish npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_53_07_170Z-debug.log
-76 error publish
-76 error publish     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
-76 error publish     at process._tickCallback (internal/process/next_tick.js:178:7)
-77 error execute callback with error
-78 error Error: Command failed: npm publish --tag latest
-78 error npm notice
-78 error npm notice 📦  grocery@0.0.4
-78 error npm notice === Tarball Contents ===
-78 error npm notice 384B package.json
-78 error npm notice 190B index.js
-78 error npm notice === Tarball Details ===
-78 error npm notice name:          grocery
-78 error npm notice version:       0.0.4
-78 error npm notice package size:  420 B
-78 error npm notice unpacked size: 574 B
-78 error npm notice shasum:        127d339f3dce5bacc9a0dc603980571279cc62d8
-78 error npm notice integrity:     sha512-OWqWhrM3YnV4V[...]CPiAMSw9DzETA==
-78 error npm notice total files:   2
-78 error npm notice
-78 error npm ERR! code ENEEDAUTH
-78 error npm ERR! need auth auth required for publishing
-78 error npm ERR! need auth You need to authorize this machine using `npm adduser`
-78 error
-78 error npm ERR! A complete log of this run can be found in:
-78 error npm ERR!     /home/arantespp/.npm/_logs/2018-05-03T15_53_07_170Z-debug.log
-78 error
-78 error     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+20 verbose getLastTag v0.0.2
+21 info Comparing with v0.0.2.
+22 silly diffSinceIn v0.0.2 packages/angular1
+23 silly diff packages/angular1/package-lock.json
+24 silly diffSinceIn v0.0.2 packages/apple
+25 silly diff packages/apple/package-lock.json
+25 silly diff packages/apple/package.json
+26 silly diffSinceIn v0.0.2 packages/banana
+27 silly diff packages/banana/package-lock.json
+27 silly diff packages/banana/package.json
+28 silly diffSinceIn v0.0.2 packages/grocery
+29 silly diff packages/grocery/package.json
+30 silly diffSinceIn v0.0.2 projects/project
+31 silly diff projects/project/package-lock.json
+32 verbose updated angular1
+33 verbose updated apple
+34 verbose updated banana
+35 verbose updated grocery
+36 verbose updated project
+37 info Checking for prereleased packages...
+38 silly collectDependents
+39 silly isPackageDependentOf angular1 angular1
+40 silly isPackageDependentOf angular1 apple
+41 silly isPackageDependentOf angular1 banana
+42 silly isPackageDependentOf angular1 grocery
+43 silly isPackageDependentOf angular1 project
+44 silly isPackageDependentOf apple angular1
+45 silly isPackageDependentOf apple apple
+46 silly isPackageDependentOf apple banana
+47 silly isPackageDependentOf apple grocery
+48 silly isPackageDependentOf apple project
+49 silly isPackageDependentOf banana angular1
+50 silly isPackageDependentOf banana apple
+51 silly isPackageDependentOf banana banana
+52 silly isPackageDependentOf banana grocery
+53 silly isPackageDependentOf banana project
+54 silly isPackageDependentOf grocery angular1
+55 silly isPackageDependentOf apple angular1
+56 silly isPackageDependentOf banana angular1
+57 silly isPackageDependentOf grocery apple
+58 verbose dependent grocery depends on apple
+59 silly isPackageDependentOf grocery banana
+60 verbose dependent grocery depends on banana
+61 silly isPackageDependentOf grocery grocery
+62 silly isPackageDependentOf apple grocery
+63 silly isPackageDependentOf banana grocery
+64 silly isPackageDependentOf grocery project
+65 silly isPackageDependentOf apple project
+66 silly isPackageDependentOf banana project
+67 silly isPackageDependentOf project angular1
+68 silly isPackageDependentOf project apple
+69 silly isPackageDependentOf project banana
+70 silly isPackageDependentOf project grocery
+71 silly isPackageDependentOf project project
+72 silly collectUpdates
+73 verbose has filtered update angular1
+74 verbose has filtered update apple
+75 verbose has filtered update banana
+76 verbose has filtered update grocery
+77 verbose has filtered update project
+78 silly initialize success
+79 silly execute attempt
+80 silly runScriptSync preversion lerna
+81 silly runScriptSync preversion angular1
+82 silly runScriptSync version angular1
+83 silly runScriptSync preversion apple
+84 silly runScriptSync version apple
+85 silly runScriptSync preversion banana
+86 silly runScriptSync version banana
+87 silly runScriptSync preversion grocery
+88 silly runScriptSync version grocery
+89 silly runScriptSync preversion project
+90 silly runScriptSync version project
+91 silly runScriptSync version lerna
+92 silly addFile /home/arantespp/Sandbox/lerna/packages/angular1/package.json
+93 silly addFile /home/arantespp/Sandbox/lerna/packages/apple/package.json
+94 silly addFile /home/arantespp/Sandbox/lerna/packages/banana/package.json
+95 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/package.json
+96 silly addFile /home/arantespp/Sandbox/lerna/projects/project/package.json
+97 silly commit Publish
+97 silly commit
+97 silly commit  - angular1@0.0.3
+97 silly commit  - apple@0.0.3
+97 silly commit  - banana@0.0.3
+97 silly commit  - grocery@0.0.3
+97 silly commit  - project@0.0.3
+98 verbose commit [ 'commit',
+98 verbose commit   '--no-verify',
+98 verbose commit   '-F',
+98 verbose commit   '/tmp/0ef2cad8-94c7-4939-8a84-a2910ac79339/lerna-commit.txt' ]
+99 silly addTag angular1@0.0.3
+100 silly addTag apple@0.0.3
+101 silly addTag banana@0.0.3
+102 silly addTag grocery@0.0.3
+103 error execute caught error
+104 error Error: fatal: tag 'grocery@0.0.3' already exists
+104 error
+104 error     at Function.module.exports.sync (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:303:26)
+104 error     at Function.execSync (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
+104 error     at Function.addTag (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/GitUtilities.js:100:39)
+104 error     at /home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:767:39
+104 error     at Array.forEach (<anonymous>)
+104 error     at PublishCommand.gitCommitAndTagVersionForUpdates (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:766:12)
+104 error     at PublishCommand.commitAndTagUpdates (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:738:26)
+104 error     at PublishCommand.execute (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:329:14)

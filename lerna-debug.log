@@ -2,8 +2,8 @@
 1 silly flags { _: [ 'publish' ],
 1 silly flags   'reject-cycles': false,
 1 silly flags   rejectCycles: false,
-1 silly flags   'skip-npm': true,
-1 silly flags   skipNpm: true }
+1 silly flags   'conventional-commits': true,
+1 silly flags   conventionalCommits: true }
 2 verbose rootPath /home/arantespp/Sandbox/lerna
 3 info version 2.11.0
 4 silly isInitialized
@@ -13,117 +13,206 @@
 8 silly initialize attempt
 9 silly isDetachedHead
 10 silly getCurrentBranch
-11 verbose getCurrentBranch test
+11 verbose getCurrentBranch master
 12 verbose isDetachedHead false
 13 silly getCurrentBranch
-14 verbose getCurrentBranch test
+14 verbose getCurrentBranch master
 15 silly getUpdates
 16 info Checking for updated packages...
 17 silly hasTags
 18 verbose hasTags true
 19 silly getLastTag
-20 verbose getLastTag v0.0.2
-21 info Comparing with v0.0.2.
-22 silly diffSinceIn v0.0.2 packages/angular1
-23 silly diff packages/angular1/package-lock.json
-24 silly diffSinceIn v0.0.2 packages/apple
-25 silly diff packages/apple/package-lock.json
-25 silly diff packages/apple/package.json
-26 silly diffSinceIn v0.0.2 packages/banana
-27 silly diff packages/banana/package-lock.json
-27 silly diff packages/banana/package.json
-28 silly diffSinceIn v0.0.2 packages/grocery
-29 silly diff packages/grocery/package.json
-30 silly diffSinceIn v0.0.2 projects/project
-31 silly diff projects/project/package-lock.json
-32 verbose updated angular1
-33 verbose updated apple
-34 verbose updated banana
-35 verbose updated grocery
-36 verbose updated project
-37 info Checking for prereleased packages...
-38 silly collectDependents
-39 silly isPackageDependentOf angular1 angular1
-40 silly isPackageDependentOf angular1 apple
-41 silly isPackageDependentOf angular1 banana
-42 silly isPackageDependentOf angular1 grocery
-43 silly isPackageDependentOf angular1 project
-44 silly isPackageDependentOf apple angular1
-45 silly isPackageDependentOf apple apple
-46 silly isPackageDependentOf apple banana
-47 silly isPackageDependentOf apple grocery
-48 silly isPackageDependentOf apple project
-49 silly isPackageDependentOf banana angular1
-50 silly isPackageDependentOf banana apple
-51 silly isPackageDependentOf banana banana
-52 silly isPackageDependentOf banana grocery
-53 silly isPackageDependentOf banana project
-54 silly isPackageDependentOf grocery angular1
-55 silly isPackageDependentOf apple angular1
-56 silly isPackageDependentOf banana angular1
-57 silly isPackageDependentOf grocery apple
-58 verbose dependent grocery depends on apple
-59 silly isPackageDependentOf grocery banana
-60 verbose dependent grocery depends on banana
-61 silly isPackageDependentOf grocery grocery
-62 silly isPackageDependentOf apple grocery
-63 silly isPackageDependentOf banana grocery
-64 silly isPackageDependentOf grocery project
-65 silly isPackageDependentOf apple project
-66 silly isPackageDependentOf banana project
-67 silly isPackageDependentOf project angular1
-68 silly isPackageDependentOf project apple
-69 silly isPackageDependentOf project banana
-70 silly isPackageDependentOf project grocery
-71 silly isPackageDependentOf project project
-72 silly collectUpdates
-73 verbose has filtered update angular1
-74 verbose has filtered update apple
-75 verbose has filtered update banana
-76 verbose has filtered update grocery
-77 verbose has filtered update project
-78 silly initialize success
-79 silly execute attempt
-80 silly runScriptSync preversion lerna
-81 silly runScriptSync preversion angular1
-82 silly runScriptSync version angular1
-83 silly runScriptSync preversion apple
-84 silly runScriptSync version apple
-85 silly runScriptSync preversion banana
-86 silly runScriptSync version banana
-87 silly runScriptSync preversion grocery
-88 silly runScriptSync version grocery
-89 silly runScriptSync preversion project
-90 silly runScriptSync version project
-91 silly runScriptSync version lerna
-92 silly addFile /home/arantespp/Sandbox/lerna/packages/angular1/package.json
-93 silly addFile /home/arantespp/Sandbox/lerna/packages/apple/package.json
-94 silly addFile /home/arantespp/Sandbox/lerna/packages/banana/package.json
-95 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/package.json
-96 silly addFile /home/arantespp/Sandbox/lerna/projects/project/package.json
-97 silly commit Publish
-97 silly commit
-97 silly commit  - angular1@0.0.3
-97 silly commit  - apple@0.0.3
-97 silly commit  - banana@0.0.3
-97 silly commit  - grocery@0.0.3
-97 silly commit  - project@0.0.3
-98 verbose commit [ 'commit',
-98 verbose commit   '--no-verify',
-98 verbose commit   '-F',
-98 verbose commit   '/tmp/0ef2cad8-94c7-4939-8a84-a2910ac79339/lerna-commit.txt' ]
-99 silly addTag angular1@0.0.3
-100 silly addTag apple@0.0.3
-101 silly addTag banana@0.0.3
-102 silly addTag grocery@0.0.3
-103 error execute caught error
-104 error Error: fatal: tag 'grocery@0.0.3' already exists
-104 error
-104 error     at Function.module.exports.sync (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:303:26)
-104 error     at Function.execSync (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
-104 error     at Function.addTag (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/GitUtilities.js:100:39)
-104 error     at /home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:767:39
-104 error     at Array.forEach (<anonymous>)
-104 error     at PublishCommand.gitCommitAndTagVersionForUpdates (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:766:12)
-104 error     at PublishCommand.commitAndTagUpdates (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:738:26)
-104 error     at PublishCommand.execute (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/lib/commands/PublishCommand.js:329:14)
+20 verbose getLastTag banana@0.1.2
+21 info Comparing with banana@0.1.2.
+22 silly diffSinceIn banana@0.1.2 packages/apple
+23 silly diff packages/apple/index.spec.js
+23 silly diff packages/apple/package.json
+24 silly diffSinceIn banana@0.1.2 packages/banana
+25 silly diff packages/banana/__mocks__/sillyname.js
+25 silly diff packages/banana/index.spec.js
+26 silly diffSinceIn banana@0.1.2 packages/grocery
+27 silly diff packages/grocery/index.js
+27 silly diff packages/grocery/package.json
+28 verbose updated apple
+29 verbose updated banana
+30 verbose updated grocery
+31 info Checking for prereleased packages...
+32 silly collectDependents
+33 silly isPackageDependentOf apple apple
+34 silly isPackageDependentOf apple banana
+35 silly isPackageDependentOf apple grocery
+36 silly isPackageDependentOf banana apple
+37 silly isPackageDependentOf banana banana
+38 silly isPackageDependentOf banana grocery
+39 silly isPackageDependentOf grocery apple
+40 verbose dependent grocery depends on apple
+41 silly isPackageDependentOf grocery banana
+42 verbose dependent grocery depends on banana
+43 silly isPackageDependentOf grocery grocery
+44 silly isPackageDependentOf apple grocery
+45 silly isPackageDependentOf banana grocery
+46 silly collectUpdates
+47 verbose has filtered update apple
+48 verbose has filtered update banana
+49 verbose has filtered update grocery
+50 silly recommendIndependentVersion for apple at /home/arantespp/Sandbox/lerna/packages/apple
+51 verbose recommendIndependentVersion increment 0.1.1 by patch
+52 silly recommendIndependentVersion for banana at /home/arantespp/Sandbox/lerna/packages/banana
+53 verbose recommendIndependentVersion increment 0.1.2 by patch
+54 silly recommendIndependentVersion for grocery at /home/arantespp/Sandbox/lerna/packages/grocery
+55 verbose recommendIndependentVersion increment 0.1.2 by patch
+56 silly initialize success
+57 silly execute attempt
+58 silly runScriptSync preversion lerna
+59 silly runScriptSync preversion apple
+60 silly runScriptSync version apple
+61 silly updateIndependentChangelog for apple at /home/arantespp/Sandbox/lerna/packages/apple
+62 silly existsSync /home/arantespp/Sandbox/lerna/packages/apple/CHANGELOG.md
+63 silly updateIndependentChangelog writing new entry: "<a name=\"0.1.2\"></a>\n## [0.1.2](https://github.com/arantespp/lerna-cd-ci-with-jenkins/compare/apple@0.1.1...apple@0.1.2) (2018-05-16)\n\n\n\n\n**Note:** Version bump only for package apple"
+64 silly writeFileSync [ '/home/arantespp/Sandbox/lerna/packages/apple/CHANGELOG.md',
+64 silly writeFileSync   '# Change Log\n\nAll notable changes to this project will be documented in this file.\nSee [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n<a name="0.1.2"></a>\n## [0.1.2](https://github.com/arantespp/lerna-cd-ci-with-jenkins/compare/apple@0.1.1...apple@0.1.2) (2018-05-16)\n\n\n\n\n**Note:** Version bump only for package apple' ]
+65 verbose updateIndependentChangelog wrote /home/arantespp/Sandbox/lerna/packages/apple/CHANGELOG.md
+66 silly runScriptSync preversion banana
+67 silly runScriptSync version banana
+68 silly updateIndependentChangelog for banana at /home/arantespp/Sandbox/lerna/packages/banana
+69 silly existsSync /home/arantespp/Sandbox/lerna/packages/banana/CHANGELOG.md
+70 silly updateIndependentChangelog writing new entry: "<a name=\"0.1.3\"></a>\n## [0.1.3](https://github.com/arantespp/lerna-cd-ci-with-jenkins/compare/banana@0.1.2...banana@0.1.3) (2018-05-16)\n\n\n\n\n**Note:** Version bump only for package banana"
+71 silly writeFileSync [ '/home/arantespp/Sandbox/lerna/packages/banana/CHANGELOG.md',
+71 silly writeFileSync   '# Change Log\n\nAll notable changes to this project will be documented in this file.\nSee [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n<a name="0.1.3"></a>\n## [0.1.3](https://github.com/arantespp/lerna-cd-ci-with-jenkins/compare/banana@0.1.2...banana@0.1.3) (2018-05-16)\n\n\n\n\n**Note:** Version bump only for package banana' ]
+72 verbose updateIndependentChangelog wrote /home/arantespp/Sandbox/lerna/packages/banana/CHANGELOG.md
+73 silly runScriptSync preversion grocery
+74 silly runScriptSync version grocery
+75 silly updateIndependentChangelog for grocery at /home/arantespp/Sandbox/lerna/packages/grocery
+76 silly existsSync /home/arantespp/Sandbox/lerna/packages/grocery/CHANGELOG.md
+77 silly updateIndependentChangelog writing new entry: "<a name=\"0.1.3\"></a>\n## [0.1.3](https://github.com/arantespp/lerna-cd-ci-with-jenkins/compare/grocery@0.1.2...grocery@0.1.3) (2018-05-16)\n\n\n\n\n**Note:** Version bump only for package grocery"
+78 silly writeFileSync [ '/home/arantespp/Sandbox/lerna/packages/grocery/CHANGELOG.md',
+78 silly writeFileSync   '# Change Log\n\nAll notable changes to this project will be documented in this file.\nSee [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n<a name="0.1.3"></a>\n## [0.1.3](https://github.com/arantespp/lerna-cd-ci-with-jenkins/compare/grocery@0.1.2...grocery@0.1.3) (2018-05-16)\n\n\n\n\n**Note:** Version bump only for package grocery' ]
+79 verbose updateIndependentChangelog wrote /home/arantespp/Sandbox/lerna/packages/grocery/CHANGELOG.md
+80 silly runScriptSync version lerna
+81 silly addFile /home/arantespp/Sandbox/lerna/packages/apple/CHANGELOG.md
+82 silly addFile /home/arantespp/Sandbox/lerna/packages/apple/package.json
+83 silly addFile /home/arantespp/Sandbox/lerna/packages/banana/CHANGELOG.md
+84 silly addFile /home/arantespp/Sandbox/lerna/packages/banana/package.json
+85 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/CHANGELOG.md
+86 silly addFile /home/arantespp/Sandbox/lerna/packages/grocery/package.json
+87 silly commit Publish
+87 silly commit
+87 silly commit  - apple@0.1.2
+87 silly commit  - banana@0.1.3
+87 silly commit  - grocery@0.1.3
+88 verbose commit [ 'commit',
+88 verbose commit   '--no-verify',
+88 verbose commit   '-F',
+88 verbose commit   '/tmp/e267c4fb-291d-413a-9ccb-4944245d94a9/lerna-commit.txt' ]
+89 silly addTag apple@0.1.2
+90 silly addTag banana@0.1.3
+91 silly addTag grocery@0.1.3
+92 silly runScriptSync postversion apple
+93 silly runScriptSync postversion banana
+94 silly runScriptSync postversion grocery
+95 silly runScriptSync postversion lerna
+96 info publish Publishing packages to npm...
+97 silly existsSync /home/arantespp/Sandbox/lerna/packages/apple/scripts/prepublish.js
+98 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/apple/scripts/prepublish.js
+99 silly existsSync /home/arantespp/Sandbox/lerna/packages/banana/scripts/prepublish.js
+100 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/banana/scripts/prepublish.js
+101 silly existsSync /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
+102 verbose execScript No prepublish script found at /home/arantespp/Sandbox/lerna/packages/grocery/scripts/prepublish.js
+103 verbose publishing apple
+104 silly publishTaggedInDir latest apple
+105 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+106 verbose publishing banana
+107 silly publishTaggedInDir latest banana
+108 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+109 error publish Retrying failed publish: apple
+110 verbose publish error undefined
+111 verbose publishing apple
+112 silly publishTaggedInDir latest apple
+113 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+114 error publish Retrying failed publish: banana
+115 verbose publish error undefined
+116 verbose publishing banana
+117 silly publishTaggedInDir latest banana
+118 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+119 error publish Retrying failed publish: apple
+120 verbose publish error undefined
+121 verbose publishing apple
+122 silly publishTaggedInDir latest apple
+123 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+124 error publish Retrying failed publish: banana
+125 verbose publish error undefined
+126 verbose publishing banana
+127 silly publishTaggedInDir latest banana
+128 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+129 error publish Retrying failed publish: apple
+130 verbose publish error undefined
+131 verbose publishing apple
+132 silly publishTaggedInDir latest apple
+133 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+134 error publish Retrying failed publish: banana
+135 verbose publish error undefined
+136 verbose publishing banana
+137 silly publishTaggedInDir latest banana
+138 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+139 error publish Retrying failed publish: apple
+140 verbose publish error undefined
+141 verbose publishing apple
+142 silly publishTaggedInDir latest apple
+143 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/apple' }
+144 error publish Retrying failed publish: banana
+145 verbose publish error undefined
+146 verbose publishing banana
+147 silly publishTaggedInDir latest banana
+148 silly getExecOpts { cwd: '/home/arantespp/Sandbox/lerna/packages/banana' }
+149 error publish Ran out of retries while publishing apple Error: Command failed: npm publish --tag latest
+149 error publish npm notice
+149 error publish npm notice 📦  apple@0.1.2
+149 error publish npm notice === Tarball Contents ===
+149 error publish npm notice 302B package.json
+149 error publish npm notice 351B CHANGELOG.md
+149 error publish npm notice 85B  index.js
+149 error publish npm notice 112B index.spec.js
+149 error publish npm notice === Tarball Details ===
+149 error publish npm notice name:          apple
+149 error publish npm notice version:       0.1.2
+149 error publish npm notice package size:  714 B
+149 error publish npm notice unpacked size: 850 B
+149 error publish npm notice shasum:        b25fdd6ee6b6846561ab9e4599fa9c2d465ad6f7
+149 error publish npm notice integrity:     sha512-sVAKnv35lCk7R[...]nbUswY6FnVbeg==
+149 error publish npm notice total files:   4
+149 error publish npm notice
+149 error publish npm ERR! code ENEEDAUTH
+149 error publish npm ERR! need auth auth required for publishing
+149 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
+149 error publish
+149 error publish npm ERR! A complete log of this run can be found in:
+149 error publish npm ERR!     /home/arantespp/.npm/_logs/2018-05-16T03_22_21_079Z-debug.log
+149 error publish
+149 error publish     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+149 error publish     at process._tickCallback (internal/process/next_tick.js:178:7)
+150 error execute callback with error
+151 error Error: Command failed: npm publish --tag latest
+151 error npm notice
+151 error npm notice 📦  apple@0.1.2
+151 error npm notice === Tarball Contents ===
+151 error npm notice 302B package.json
+151 error npm notice 351B CHANGELOG.md
+151 error npm notice 85B  index.js
+151 error npm notice 112B index.spec.js
+151 error npm notice === Tarball Details ===
+151 error npm notice name:          apple
+151 error npm notice version:       0.1.2
+151 error npm notice package size:  714 B
+151 error npm notice unpacked size: 850 B
+151 error npm notice shasum:        b25fdd6ee6b6846561ab9e4599fa9c2d465ad6f7
+151 error npm notice integrity:     sha512-sVAKnv35lCk7R[...]nbUswY6FnVbeg==
+151 error npm notice total files:   4
+151 error npm notice
+151 error npm ERR! code ENEEDAUTH
+151 error npm ERR! need auth auth required for publishing
+151 error npm ERR! need auth You need to authorize this machine using `npm adduser`
+151 error
+151 error npm ERR! A complete log of this run can be found in:
+151 error npm ERR!     /home/arantespp/.npm/_logs/2018-05-16T03_22_21_079Z-debug.log
+151 error
+151 error     at Promise.all.then.arr (/home/arantespp/.nvm/versions/node/v10.0.0/lib/node_modules/lerna/node_modules/execa/index.js:236:11)

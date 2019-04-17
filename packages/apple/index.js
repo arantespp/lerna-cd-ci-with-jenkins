@@ -1,3 +1,3 @@
 const sillyname = require("sillyname");
 
-module.exports = `apple and ${sillyname()} s`;
+module.exports = `apple and ${sillyname()} vxc`;
